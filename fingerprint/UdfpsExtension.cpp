@@ -16,13 +16,13 @@
 
 #include <compositionengine/UdfpsExtension.h>
 
-uint32_t getUdfpsZOrder(uint32_t z, bool touched) {
+uint32_t getUdfpsZOrder(uint32_t z, bool touched __unused) {
     (void)z;
 
     return z;
 }
 
-uint64_t getUdfpsUsageBits(uint64_t usageBits, bool touched) {
+uint64_t getUdfpsUsageBits(uint64_t usageBits, bool touched __unused) {
     if (touched) {
         usageBits |= 0x400000000LL;
     }
